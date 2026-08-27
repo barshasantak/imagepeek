@@ -39,7 +39,7 @@ In modern digital photography, graphic design, print publishing, and web develop
 * **Metadata & rights leakage:** Are your **IPTC copyright notices**, **EXIF lens parameters**, and **GPS location tags** properly embedded or scrubbed for privacy?
 * **Bloated tooling:** Opening Adobe Photoshop, Lightroom, or Bridge just to check an image's DPI, embedded ICC profile, or bits-per-pixel ratio takes 20+ seconds. macOS Preview's Inspector hides structural data, and terminal tools like `exiftool` disrupt your visual workflow.
 
-We asked a simple question: **What if you had a blazing-fast, visually pristine Mac app that reveals the complete DNA of any image file in under 2 milliseconds?**
+We asked a simple question: **What if you had a blazing-fast, visually pristine Mac app that reveals the complete DNA of any image file in under 200 milliseconds?**
 
 ImagePeek was created at **Tara Design Studio** to answer that need. Built from the ground up in 100% native Swift and SwiftUI, ImagePeek taps directly into Apple’s low-level `ImageIO`, `CoreGraphics`, and `CryptoKit` frameworks. No web runtimes. No full-bitmap RAM bloat. Just pure, instant visual intelligence.
 
