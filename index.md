@@ -181,25 +181,57 @@ Stop guessing what is inside your image files. Verify color profiles, confirm bi
 
 ### Frequently Asked Questions
 
-<details>
-<summary><strong>Does ImagePeek alter, strip, or recompress my images?</strong></summary>
-<p>No. ImagePeek operates strictly in read-only mode. It inspects metadata dictionaries and image stream headers without modifying a single pixel or byte of your files.</p>
-</details>
+<p style="color: #6e6e73; font-size: 0.9rem; margin-bottom: 20px;">
+  💡 <em>Click any question below to expand the answer.</em>
+</p>
 
-<details>
-<summary><strong>Where are diagnostic logs stored?</strong></summary>
-<p>ImagePeek maintains rolling daily logs formatted as <code>imagepeek-YYYY-MM-DD.log</code>. You can reveal your log folder directly in Finder anytime by pressing <code>⇧ + ⌘ + L</code> (or via <strong>Help → Show Logs in Finder</strong>).</p>
-</details>
+<div style="max-width: 840px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;">
 
-<details>
-<summary><strong>Is ImagePeek private?</strong></summary>
-<p>Yes. ImagePeek is 100% secure. It contains zero analytics, no telemetry, no tracking, and never makes unauthorized network connections.</p>
-</details>
+  <!-- Question 1 -->
+  <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
+    <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
+      <span>Does ImagePeek alter, strip, or recompress my images?</span>
+      <span style="font-size: 0.75rem; color: #0071e3; font-weight: 600; background: rgba(0,113,227,0.1); padding: 4px 10px; border-radius: 999px; white-space: nowrap; margin-left: 12px;">+ View Answer ▾</span>
+    </summary>
+    <div style="padding: 14px 18px 18px 18px; border-top: 1px solid rgba(128,128,128,0.15); color: #424245; font-size: 0.95rem; line-height: 1.6; background: rgba(128,128,128,0.01);">
+      No. ImagePeek operates strictly in <strong>read-only mode</strong>. It inspects metadata dictionaries and image stream headers without modifying a single pixel or byte of your files.
+    </div>
+  </details>
 
-<details>
-<summary><strong>How do I report a bug or request a new image format?</strong></summary>
-<p>You can open an issue or start a discussion on our official <a href="https://github.com/santakd/ImagePeek/issues">GitHub Issues page</a>.</p>
-</details>
+  <!-- Question 2 -->
+  <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
+    <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
+      <span>Where are diagnostic logs stored?</span>
+      <span style="font-size: 0.75rem; color: #0071e3; font-weight: 600; background: rgba(0,113,227,0.1); padding: 4px 10px; border-radius: 999px; white-space: nowrap; margin-left: 12px;">+ View Answer ▾</span>
+    </summary>
+    <div style="padding: 14px 18px 18px 18px; border-top: 1px solid rgba(128,128,128,0.15); color: #424245; font-size: 0.95rem; line-height: 1.6; background: rgba(128,128,128,0.01);">
+      ImagePeek maintains rolling daily logs formatted as <code>imagepeek-YYYY-MM-DD.log</code>. You can reveal your log folder directly in Finder anytime by pressing <kbd style="background: rgba(128,128,128,0.15); padding: 2px 6px; border-radius: 4px; font-family: monospace;">⇧ + ⌘ + L</kbd> (or via <strong>Help → Show Logs in Finder</strong>).
+    </div>
+  </details>
+
+  <!-- Question 3 -->
+  <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
+    <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
+      <span>Is ImagePeek private?</span>
+      <span style="font-size: 0.75rem; color: #0071e3; font-weight: 600; background: rgba(0,113,227,0.1); padding: 4px 10px; border-radius: 999px; white-space: nowrap; margin-left: 12px;">+ View Answer ▾</span>
+    </summary>
+    <div style="padding: 14px 18px 18px 18px; border-top: 1px solid rgba(128,128,128,0.15); color: #424245; font-size: 0.95rem; line-height: 1.6; background: rgba(128,128,128,0.01);">
+      Yes. ImagePeek is <strong>100% secure</strong>. It contains zero analytics, no telemetry, no tracking, and never makes unauthorized network connections.
+    </div>
+  </details>
+
+  <!-- Question 4 -->
+  <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
+    <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
+      <span>How do I report a bug or request a new image format?</span>
+      <span style="font-size: 0.75rem; color: #0071e3; font-weight: 600; background: rgba(0,113,227,0.1); padding: 4px 10px; border-radius: 999px; white-space: nowrap; margin-left: 12px;">+ View Answer ▾</span>
+    </summary>
+    <div style="padding: 14px 18px 18px 18px; border-top: 1px solid rgba(128,128,128,0.15); color: #424245; font-size: 0.95rem; line-height: 1.6; background: rgba(128,128,128,0.01);">
+      You can open an issue or start a discussion on our official <a href="https://github.com/santakd/ImagePeek/issues" style="color: #0071e3; text-decoration: underline; font-weight: 500;">GitHub Issues page</a>.
+    </div>
+  </details>
+
+</div>
 
 
 ### Support
