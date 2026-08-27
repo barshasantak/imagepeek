@@ -98,17 +98,62 @@ ImagePeek parses professional RAW camera masters, vector graphics, print contain
 
 Most image inspection utilities are either bloated photo managers or terminal scripts. ImagePeek is built exclusively for macOS:
 
-     ┌────────────────────────────────────────────────────────────────────┐
-     │ METRIC                     │ IMAGEPEEK          │ ADOBE BRIDGE     │ 
-     ├────────────────────────────┼────────────────────┼──────────────────┤
-     │ Native macOS Architecture  │ ✅ 100% Swift      │ ❌ Heavy Suite   │
-     │ Launch Time                │ ⚡ < 10 ms          │ 🐢 3,000+ ms     │
-     │ Memory Footprint           │ 🪶 ~ 22 MB         │ 🐘 800 MB - 2 GB │
-     │ Visual A-B Diff Mode       │ ✅ Built-in Split  │ ❌ None          │
-     │ Drag & Drop 2 Files        │ ✅ Instant Compare │ ❌ Single file   │
-     │ ProMotion 120Hz Rendering  │ ✅ Liquid Smooth   │ ❌ Laggy UI      │
-     │ Cryptographic Hashing      │ ✅ Hardware NEON   │ ❌ Not included  │
-     └────────────────────────────────────────────────────────────────────┘
+<div style="overflow-x: auto; margin: 24px 0;">
+  <table style="width: 100%; border-collapse: collapse; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 0.9rem; text-align: left; border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden;">
+    <thead>
+      <tr style="background: rgba(128,128,128,0.1); border-bottom: 2px solid rgba(128,128,128,0.25);">
+        <th style="padding: 12px 16px; width: 30%;">Capability / Metric</th>
+        <th style="padding: 12px 16px; width: 25%; background: rgba(0, 113, 227, 0.08); color: #0071e3; font-weight: 700;">ImagePeek</th>
+        <th style="padding: 12px 16px; width: 25%;">Adobe Bridge / PS</th>
+        <th style="padding: 12px 16px; width: 20%;">ExifTool (CLI)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid rgba(128,128,128,0.15);">
+        <td style="padding: 10px 16px; font-weight: 600;">Native Architecture</td>
+        <td style="padding: 10px 16px; background: rgba(0, 113, 227, 0.04); font-weight: 600;">✅ 100% Swift / CoreGraphics</td>
+        <td style="padding: 10px 16px;">❌ Heavy Suite</td>
+        <td style="padding: 10px 16px;">⚠️ Perl Script</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(128,128,128,0.15); background: rgba(128,128,128,0.02);">
+        <td style="padding: 10px 16px; font-weight: 600;">Launch Time</td>
+        <td style="padding: 10px 16px; background: rgba(0, 113, 227, 0.04); font-weight: 600;">⚡ &lt; 10 ms (Instant)</td>
+        <td style="padding: 10px 16px;">🐢 3,000+ ms</td>
+        <td style="padding: 10px 16px;">⚡ Fast</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(128,128,128,0.15);">
+        <td style="padding: 10px 16px; font-weight: 600;">Memory Footprint</td>
+        <td style="padding: 10px 16px; background: rgba(0, 113, 227, 0.04); font-weight: 600;">🪶 ~ 22 MB (No Bitmap Buffering)</td>
+        <td style="padding: 10px 16px;">🐘 800 MB – 2 GB</td>
+        <td style="padding: 10px 16px;">🪶 ~ 25 MB</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(128,128,128,0.15); background: rgba(128,128,128,0.02);">
+        <td style="padding: 10px 16px; font-weight: 600;">Visual A-B Diff Mode</td>
+        <td style="padding: 10px 16px; background: rgba(0, 113, 227, 0.04); font-weight: 600;">✅ Built-in Split-Table</td>
+        <td style="padding: 10px 16px;">❌ None</td>
+        <td style="padding: 10px 16px;">❌ Manual diff</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(128,128,128,0.15);">
+        <td style="padding: 10px 16px; font-weight: 600;">Dual-File Drag &amp; Drop</td>
+        <td style="padding: 10px 16px; background: rgba(0, 113, 227, 0.04); font-weight: 600;">✅ Instant Auto-Compare</td>
+        <td style="padding: 10px 16px;">❌ Single file</td>
+        <td style="padding: 10px 16px;">❌ No GUI</td>
+      </tr>
+      <tr style="border-bottom: 1px solid rgba(128,128,128,0.15); background: rgba(128,128,128,0.02);">
+        <td style="padding: 10px 16px; font-weight: 600;">120Hz ProMotion UI</td>
+        <td style="padding: 10px 16px; background: rgba(0, 113, 227, 0.04); font-weight: 600;">✅ Liquid Smooth</td>
+        <td style="padding: 10px 16px;">❌ UI Stutter</td>
+        <td style="padding: 10px 16px;">❌ Terminal only</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px 16px; font-weight: 600;">Hardware SHA-256</td>
+        <td style="padding: 10px 16px; background: rgba(0, 113, 227, 0.04); font-weight: 600;">✅ CryptoKit NEON Engine</td>
+        <td style="padding: 10px 16px;">❌ Not included</td>
+        <td style="padding: 10px 16px;">⚠️ Separate tool</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 ## ✨ User Experience Highlights
