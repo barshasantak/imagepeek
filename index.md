@@ -98,17 +98,17 @@ ImagePeek parses professional RAW camera masters, vector graphics, print contain
 
 Most image inspection utilities are either bloated photo managers or terminal scripts. ImagePeek is built exclusively for macOS:
 
-          ┌─────────────────────────────────────────────────────────────────────────────────────┐
-          │ METRIC                     │ IMAGEPEEK          │ ADOBE BRIDGE     │ EXIFTOOL (CLI) │
-          ├────────────────────────────┼────────────────────┼──────────────────┼────────────────┤
-          │ Native macOS Architecture  │ ✅ 100% Swift      │ ❌ Heavy Suite   │ ⚠️ Perl CLI    │
-          │ Launch Time                │ ⚡ < 10 ms          │ 🐢 3,000+ ms     │ ⚡ Fast         │
-          │ Memory Footprint           │ 🪶 ~ 22 MB         │ 🐘 800 MB - 2 GB │ 🪶 ~ 25 MB     │
-          │ Visual A-B Diff Mode       │ ✅ Built-in Split  │ ❌ None          │ ❌ Manual diff │
-          │ Drag & Drop 2 Files        │ ✅ Instant Compare │ ❌ Single file   │ ❌ No GUI      │
-          │ ProMotion 120Hz Rendering  │ ✅ Liquid Smooth   │ ❌ Laggy UI      │ ❌ Terminal    │
-          │ Cryptographic Hashing      │ ✅ Hardware NEON   │ ❌ Not included  │ ⚠️ Separate md5│
-          └─────────────────────────────────────────────────────────────────────────────────────┘
+          ┌────────────────────────────────────────────────────────────────────┐
+          │ METRIC                     │ IMAGEPEEK          │ ADOBE BRIDGE     │ 
+          ├────────────────────────────┼────────────────────┼──────────────────┤
+          │ Native macOS Architecture  │ ✅ 100% Swift      │ ❌ Heavy Suite   │
+          │ Launch Time                │ ⚡ < 10 ms          │ 🐢 3,000+ ms     │
+          │ Memory Footprint           │ 🪶 ~ 22 MB         │ 🐘 800 MB - 2 GB │
+          │ Visual A-B Diff Mode       │ ✅ Built-in Split  │ ❌ None          │
+          │ Drag & Drop 2 Files        │ ✅ Instant Compare │ ❌ Single file   │
+          │ ProMotion 120Hz Rendering  │ ✅ Liquid Smooth   │ ❌ Laggy UI      │
+          │ Cryptographic Hashing      │ ✅ Hardware NEON   │ ❌ Not included  │
+          └────────────────────────────────────────────────────────────────────┘
 
 
 ## ✨ User Experience Highlights
