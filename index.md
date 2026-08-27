@@ -11,21 +11,21 @@
 See Beneath the Pixel.
 The native, studio-grade image specification analyzer and side-by-side A-B diff comparator engineered exclusively for macOS.
        
-          ┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
-          │ 📂 Open Image... │ ⚖️ Compare... │ 💾 Export JSON │ 📋 Copy │ [Report Font: A- 100% A+ ↺] 🔍 Filter │
-          ├──────────────────────────────────────────────────────────────────────────────────────────────────────┤
-          │ RAW_MASTER.dng (Image A) │ [ ↔ 3 Mismatches ] │ WEB_OPTIMIZED.webp (Image B)                         │
-          │ Format: Adobe DNG RAW (45.7 MP) │ Δ: -4240 × -2832 px │ Format: Google WebP (3.1 MP)                 │
-          ├───────────────────────────────────────┴─────────────────────────┴────────────────────────────────────┤
-          │ [IMAGE GEOMETRY & COLOR PROFILE]                                                                     │
-          │ Dimensions 8256 × 5504 px [DIFF] 2048 × 1365 px                                                      │
-          │ Megapixels 45.44 MP [DIFF] 2.80 MP (Δ: -42.64 MP)                                                    │
-          │ Bit Depth 14-bit per channel [DIFF] 8-bit per channel                                                │
-          │ Color Model RGB [MATCH] RGB                                                                          │
-          │ ICC Color Profile Adobe RGB (1998) [DIFF] sRGB IEC61966-2.1                                          │
-          │ Alpha / Transparency No [MATCH] No                                                                   │
-          │ Compression (BPP) 16.20 bits/pixel [DIFF] 1.42 bits/pixel                                            │
-          └──────────────────────────────────────────────────────────────────────────────────────────────────────┘
+     ┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
+     │ 📂 Open Image... │ ⚖️ Compare... │ 💾 Export JSON │ 📋 Copy │ [Report Font: A- 100% A+ ↺] 🔍 Filter │
+     ├──────────────────────────────────────────────────────────────────────────────────────────────────────┤
+     │ RAW_MASTER.dng (Image A) │ [ ↔ 3 Mismatches ] │ WEB_OPTIMIZED.webp (Image B)                         │
+     │ Format: Adobe DNG RAW (45.7 MP) │ Δ: -4240 × -2832 px │ Format: Google WebP (3.1 MP)                 │
+     ├───────────────────────────────────────┴─────────────────────────┴────────────────────────────────────┤
+     │ [IMAGE GEOMETRY & COLOR PROFILE]                                                                     │
+     │ Dimensions 8256 × 5504 px [DIFF] 2048 × 1365 px                                                      │
+     │ Megapixels 45.44 MP [DIFF] 2.80 MP (Δ: -42.64 MP)                                                    │
+     │ Bit Depth 14-bit per channel [DIFF] 8-bit per channel                                                │
+     │ Color Model RGB [MATCH] RGB                                                                          │
+     │ ICC Color Profile Adobe RGB (1998) [DIFF] sRGB IEC61966-2.1                                          │
+     │ Alpha / Transparency No [MATCH] No                                                                   │
+     │ Compression (BPP) 16.20 bits/pixel [DIFF] 1.42 bits/pixel                                            │
+     └──────────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 
 ## 📖 The Product Story
@@ -98,17 +98,17 @@ ImagePeek parses professional RAW camera masters, vector graphics, print contain
 
 Most image inspection utilities are either bloated photo managers or terminal scripts. ImagePeek is built exclusively for macOS:
 
-          ┌────────────────────────────────────────────────────────────────────┐
-          │ METRIC                     │ IMAGEPEEK          │ ADOBE BRIDGE     │ 
-          ├────────────────────────────┼────────────────────┼──────────────────┤
-          │ Native macOS Architecture  │ ✅ 100% Swift      │ ❌ Heavy Suite   │
-          │ Launch Time                │ ⚡ < 10 ms          │ 🐢 3,000+ ms     │
-          │ Memory Footprint           │ 🪶 ~ 22 MB         │ 🐘 800 MB - 2 GB │
-          │ Visual A-B Diff Mode       │ ✅ Built-in Split  │ ❌ None          │
-          │ Drag & Drop 2 Files        │ ✅ Instant Compare │ ❌ Single file   │
-          │ ProMotion 120Hz Rendering  │ ✅ Liquid Smooth   │ ❌ Laggy UI      │
-          │ Cryptographic Hashing      │ ✅ Hardware NEON   │ ❌ Not included  │
-          └────────────────────────────────────────────────────────────────────┘
+     ┌────────────────────────────────────────────────────────────────────┐
+     │ METRIC                     │ IMAGEPEEK          │ ADOBE BRIDGE     │ 
+     ├────────────────────────────┼────────────────────┼──────────────────┤
+     │ Native macOS Architecture  │ ✅ 100% Swift      │ ❌ Heavy Suite   │
+     │ Launch Time                │ ⚡ < 10 ms          │ 🐢 3,000+ ms     │
+     │ Memory Footprint           │ 🪶 ~ 22 MB         │ 🐘 800 MB - 2 GB │
+     │ Visual A-B Diff Mode       │ ✅ Built-in Split  │ ❌ None          │
+     │ Drag & Drop 2 Files        │ ✅ Instant Compare │ ❌ Single file   │
+     │ ProMotion 120Hz Rendering  │ ✅ Liquid Smooth   │ ❌ Laggy UI      │
+     │ Cryptographic Hashing      │ ✅ Hardware NEON   │ ❌ Not included  │
+     └────────────────────────────────────────────────────────────────────┘
 
 
 ## ✨ User Experience Highlights
