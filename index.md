@@ -157,7 +157,7 @@ Stop guessing what is inside your image files. Verify color profiles, confirm bi
 </details>
 
 
-### Contact & Studio Credits
+### Support
 
 You can report any issues here: [https://github.com/barshasantak/imagepeek/issues](https://github.com/barshasantak/imagepeek/issues){:target="_blank"}
 
