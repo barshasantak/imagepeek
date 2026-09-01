@@ -45,6 +45,7 @@ Native, high-performance image specification analyzer, deep EXIF/optical inspect
 In modern digital photography, graphic design, print publishing, and web development, managing visual assets is fraught with hidden complexities:
 
 * **Color space stripping:** Did your export retain **Display P3** or **Adobe RGB (1998)** wide-gamuts, or was it silently clipped to generic sRGB?
+* **Optical & EXIF parameter verification:** What focal length, aperture, shutter speed, and ISO were used? Are camera body/lens serial numbers and exact capture timestamps preserved?
 * **Quantization & bit depth drops:** Did your 16-bit TIFF retain its smooth gradients, or did an automated pipeline compress it down to 8-bit with banding?
 * **Metadata & rights leakage:** Are your **IPTC copyright notices**, **EXIF lens parameters**, and **GPS location tags** properly embedded or scrubbed for privacy?
 * **Bloated tooling:** Opening Adobe Photoshop, Lightroom, or Bridge just to check an image's DPI, embedded ICC profile, or bits-per-pixel ratio takes 20+ seconds. macOS Preview's Inspector hides structural data, and terminal tools like `exiftool` disrupt your visual workflow.
@@ -63,9 +64,19 @@ ImagePeek was created at **Tara Design Studio** to answer that need. Built from 
       <h3>🖼️ Deep Image Stream Demuxing</h3>
       <p>Inspect true dimensions, pixel densities (DPI), Megapixels, bit depths (8/10/12/14/16-bit), color models (RGB, CMYK, Lab, Grayscale), alpha channels, and animation frame counts without loading gigabytes of raw uncompressed bitmap arrays into memory.</p>
     </td>
+     <td width="50%" valign="top">
+      <h3>📷 Deep EXIF & Optical Shooting Telemetry</h3>
+      <p>Decodes Aperture (ƒ-stop), Shutter Speed fractions, ISO speed, 35mm-equivalent focal lengths, Exposure Bias (EV), Metering Modes, Flash status, White Balance, and Camera/Lens hardware models & serial numbers.</p>
+    </td>
+     </tr>
+  <tr>    
     <td width="50%" valign="top">
       <h3>⚖️ Side-by-Side A-B Image Comparator</h3>
       <p>Compare two images simultaneously. ImagePeek aligns property keys and instantly highlights dimension scaling, megapixel deltas, color gamut shifts, and missing IPTC copyright tags.</p>
+    </td>
+     <td width="50%" valign="top">
+      <h3>🗺️ GPS Telemetry & One-Click Maps</h3>
+      <p>Extracts DMS coordinates, signed decimal latitude/longitude, altitude meters, velocity, and UTC capture timestamps with a built-in one-click shortcut to launch the location in <strong>Apple Maps</strong>.</p>
     </td>
   </tr>
   <tr>
@@ -169,15 +180,16 @@ Most image inspection utilities are either bloated photo managers or terminal sc
 ## ✨ User Experience Highlights
 
 ### 1. Dual-Drop Compare Mode
-Select two image files in Finder (like your 100 MP Hasselblad TIFF master and your optimized web WebP render) and drag them together onto ImagePeek. The window instantly transitions into a **two-column comparative diff table**, highlighting mismatches in bold amber and identical parameters in calm green.
+Select two image files in Finder (like your 100 MP medium-format RAW master and your web WebP render) and drag them together onto ImagePeek. The app instantly presents a **two-column comparative diff table**, highlighting mismatches in bold amber and matching parameters in calm green.
 
-### 2. Zero RAM Bloat on Gigapixel & RAW Files
-Thanks to stream-header demuxing via `ImageIO`, dropping a **500 MB 16-bit uncompressed TIFF** takes the exact same fraction of a second as opening a **50 KB thumbnail icon**.
+### 2. Quick Shooting Stats & Optical Introspection
+When you load a photo containing EXIF headers, ImagePeek immediately shows an **`EXIF`** badge and a shooting summary pill (`📷 50mm • ƒ/2.8 • 1/500s • ISO 100`) directly in the header banner.
 
-### 3. Native Mac Ergonomics
-* Full support for macOS Dark and Light modes.
-* Universal keyboard shortcuts (`⌘O` to open, `⌘E` to export, `⌘C` to copy, `⌘+` to scale text, `⇧⌘L` to view logs).
-* Multi-column search bar that filters image keys, color profiles, EXIF tags, and copyright data instantly as you type.
+### 3. Interactive GPS Map Integration
+Clicking the **View Map** button next to any decimal GPS coordinate immediately opens **Apple Maps** at the exact geolocation where the photograph was captured.
+
+### 4. Zero RAM Bloat on Gigapixel & RAW Files
+Thanks to stream-header demuxing via `ImageIO`, dropping a **500 MB 16-bit uncompressed TIFF** or a **45 MP DNG RAW** takes the exact same fraction of a second as opening a **50 KB thumbnail icon**.
 
 
 
@@ -200,6 +212,17 @@ Stop guessing what is inside your image files. Verify color profiles, confirm bi
   <!-- Question 1 -->
   <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
     <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
+      <span>Which EXIF and camera metadata tags does ImagePeek inspect?</span>
+      <span style="font-size: 0.75rem; color: #0071e3; font-weight: 600; background: rgba(0,113,227,0.1); padding: 4px 10px; border-radius: 999px; white-space: nowrap; margin-left: 12px;">+ View Answer ▾</span>
+    </summary>
+    <div style="padding: 14px 18px 18px 18px; border-top: 1px solid rgba(128,128,128,0.15); color: #424245; font-size: 0.95rem; line-height: 1.6; background: rgba(128,128,128,0.01);">
+      ImagePeek decodes Camera Make &amp; Model, Lens Hardware Model, Camera Body &amp; Lens Serial Numbers, Aperture (ƒ-number), Fractional Shutter Speeds, ISO Sensitivity, Focal Length &amp; 35mm Equivalent, Exposure Bias (EV), Exposure Program (Manual/Av/Tv/AE), Metering Mode, Flash Status bitmasks, White Balance, Orientation, and original capture timestamps with timezone offsets.
+    </div>
+  </details>
+  
+  <!-- Question 2 -->
+  <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
+    <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
       <span>Does ImagePeek alter, strip, or recompress my images?</span>
       <span style="font-size: 0.75rem; color: #0071e3; font-weight: 600; background: rgba(0,113,227,0.1); padding: 4px 10px; border-radius: 999px; white-space: nowrap; margin-left: 12px;">+ View Answer ▾</span>
     </summary>
@@ -208,7 +231,7 @@ Stop guessing what is inside your image files. Verify color profiles, confirm bi
     </div>
   </details>
 
-  <!-- Question 2 -->
+  <!-- Question 3 -->
   <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
     <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
       <span>Where are diagnostic logs stored?</span>
@@ -219,7 +242,7 @@ Stop guessing what is inside your image files. Verify color profiles, confirm bi
     </div>
   </details>
 
-  <!-- Question 3 -->
+  <!-- Question 4 -->
   <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
     <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
       <span>Is ImagePeek private?</span>
@@ -230,7 +253,7 @@ Stop guessing what is inside your image files. Verify color profiles, confirm bi
     </div>
   </details>
 
-  <!-- Question 4 -->
+  <!-- Question 5 -->
   <details style="border: 1px solid rgba(128,128,128,0.25); border-radius: 8px; overflow: hidden; background: rgba(128,128,128,0.02); transition: all 0.2s ease;">
     <summary style="padding: 14px 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; font-size: 1rem;">
       <span>How do I report a bug or request a new image format?</span>
