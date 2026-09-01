@@ -9,24 +9,34 @@
 
 
 See Beneath the Pixel.
-The native, studio-grade image specification analyzer and side-by-side A-B diff comparator engineered exclusively for macOS.
+Native, high-performance image specification analyzer, deep EXIF/optical inspector, and A-B image comparator for macOS
        
-     ┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐
-     │ 📂 Open Image... │ ⚖️ Compare... │ 💾 Export JSON │ 📋 Copy │ [Report Font: A- 100% A+ ↺] 🔍 Filter │
-     ├──────────────────────────────────────────────────────────────────────────────────────────────────────┤
-     │ RAW_MASTER.dng (Image A) │ [ ↔ 3 Mismatches ] │ WEB_OPTIMIZED.webp (Image B)                         │
-     │ Format: Adobe DNG RAW (45.7 MP) │ Δ: -4240 × -2832 px │ Format: Google WebP (3.1 MP)                 │
-     ├───────────────────────────────────────┴─────────────────────────┴────────────────────────────────────┤
-     │ [IMAGE GEOMETRY & COLOR PROFILE]                                                                     │
-     │ Dimensions 8256 × 5504 px [DIFF] 2048 × 1365 px                                                      │
-     │ Megapixels 45.44 MP [DIFF] 2.80 MP (Δ: -42.64 MP)                                                    │
-     │ Bit Depth 14-bit per channel [DIFF] 8-bit per channel                                                │
-     │ Color Model RGB [MATCH] RGB                                                                          │
-     │ ICC Color Profile Adobe RGB (1998) [DIFF] sRGB IEC61966-2.1                                          │
-     │ Alpha / Transparency No [MATCH] No                                                                   │
-     │ Compression (BPP) 16.20 bits/pixel [DIFF] 1.42 bits/pixel                                            │
-     └──────────────────────────────────────────────────────────────────────────────────────────────────────┘
-
+    ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+    │ 📂 Open... │ ⚖️ Compare... │ 💾 Export JSON │ 📋 Copy │ [Font: A- 100% A+ ↺] 🔍 Filter specs, EXIF, GPS...  │
+    ├──────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+    │ RAW_MASTER.dng (Image A) [EXIF] │ [ ↔ 5 Mismatches ] │ WEB_EXPORT.webp (Image B)                             │
+    │ 📷 70mm • ƒ/2.8 • 1/500s • ISO 100 │ Δ: -6208 × -4139 px │ Format: Google WebP (3.1 MP)                      │
+    ├────────────────────────────────────┴───────────────────────────────────┴─────────────────────────────────────┤
+    │ [IMAGE GEOMETRY & BITSTREAM]                                                                                 │
+    │ Dimensions 8256 × 5504 px [DIFF] 2048 × 1365 px (Δ: -6208 × -4139 px)                                        │
+    │ Megapixels 45.44 MP [DIFF] 2.80 MP (Δ: -42.64 MP)                                                            │
+    │ Bit Depth 14-bit per channel [DIFF] 8-bit per channel                                                        │
+    │ Color Model RGB [MATCH] RGB                                                                                  │
+    │                                                                                                              │
+    │ [EXIF & CAMERA METADATA]                                                                                     │
+    │ Camera Hardware Sony ILCE-7RM5 [MATCH] Sony ILCE-7RM5                                                        │
+    │ Lens Model FE 24-70mm F2.8 GM II [MATCH] FE 24-70mm F2.8 GM II                                               │
+    │ Aperture ƒ/2.8 [MATCH] ƒ/2.8                                                                                 │
+    │ Shutter Speed 1/500 s [MATCH] 1/500 s                                                                        │
+    │ ISO Speed ISO 100 [DIFF] ISO 800                                                                             │
+    │ Focal Length 70.0 mm (35mm: 70 mm) [MATCH] 70.0 mm (35mm: 70 mm)                                             │
+    │ Exposure Program Manual [MATCH] Manual                                                                       │
+    │ Flash Mode Flash Did Not Fire [MATCH] Flash Did Not Fire                                                     │
+    │                                                                                                              │
+    │ [GPS LOCATION DATA]                                                                                          │
+    │ GPS Coordinates 37.7749° N, 122.4194° W [MATCH] 37.7749° N, 122.4194° W                                      │
+    │ GPS Decimal 37.774900, -122.419400 [MATCH] 37.774900, -122.419400 [🗺️ View Map]                              │
+    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 
 ## 📖 The Product Story
 
